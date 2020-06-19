@@ -62,3 +62,7 @@ Este projeto é um ToDoList que consiste em um CRUD de Tarefas utilizando autent
 			"Concluded": Bool
 		}	 
 		```
+
+## Observação
+
+- A Rota do swagger é /swagger/index.html :smile:

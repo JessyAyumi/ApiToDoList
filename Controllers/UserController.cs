@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using System.Linq;
 using ApiToDoList.Services;
 using ApiToDoList.Repositories;
+using ApiToDoList.Interface;
 
 namespace ApiToDoList.Controllers
 {
@@ -11,9 +12,9 @@ namespace ApiToDoList.Controllers
     [Route("v1/user")]
     public class UserController : ControllerBase
     {
-        private readonly UserRepository _repository;
+        private readonly IUserRepository _repository;
 
-        public UserController(UserRepository repository)
+        public UserController(IUserRepository repository)
         {
             _repository = repository;
         }

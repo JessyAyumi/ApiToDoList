@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using ApiToDoList.Repositories;
 using ApiToDoList.Models;
+using ApiToDoList.Interface;
 
 namespace ApiToDoList.Controllers
 {
@@ -10,9 +11,9 @@ namespace ApiToDoList.Controllers
     [Route("v1/task")]
     public class TaskController : ControllerBase
     {
-        private readonly TaskRepository _repository;
+        private readonly ITaskRepository _repository;
 
-        public TaskController(TaskRepository repository)
+        public TaskController(ITaskRepository repository)
         {
             _repository = repository;
         }

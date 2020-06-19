@@ -38,3 +38,8 @@ C:\Users\Jéssica Ayumi Uehara\Documents\GitHub\ApiToDoList\bin\Debug\netcoreapp
 C:\Users\Jéssica Ayumi Uehara\Documents\GitHub\ApiToDoList\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\Jéssica Ayumi Uehara\Documents\GitHub\ApiToDoList\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\Jéssica Ayumi Uehara\Documents\GitHub\ApiToDoList\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\Jéssica Ayumi Uehara\Documents\GitHub\ApiToDoList\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\Jéssica Ayumi Uehara\Documents\GitHub\ApiToDoList\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Jéssica Ayumi Uehara\Documents\GitHub\ApiToDoList\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Jéssica Ayumi Uehara\Documents\GitHub\ApiToDoList\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Jéssica Ayumi Uehara\Documents\GitHub\ApiToDoList\obj\Debug\netcoreapp3.1\ApiToDoList.MvcApplicationPartsAssemblyInfo.cs

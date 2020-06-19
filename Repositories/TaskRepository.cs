@@ -1,4 +1,5 @@
 using ApiToDoList.Database;
+using ApiToDoList.Interface;
 using ApiToDoList.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
@@ -6,7 +7,7 @@ using System.Linq;
 
 namespace ApiToDoList.Repositories
 {
-    public class TaskRepository
+    public class TaskRepository : ITaskRepository
     {
         private readonly ApplicationDBContext _context;
         public TaskRepository(ApplicationDBContext context)

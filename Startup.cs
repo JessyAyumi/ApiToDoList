@@ -10,6 +10,9 @@ using ApiToDoList.Database;
 using System.Text;
 using Pomelo.EntityFrameworkCore.MySql;
 using ApiToDoList.Repositories;
+using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.StaticFiles;
+using ApiToDoList.Interface;
 
 namespace ApiToDoList
 {
@@ -24,13 +27,18 @@ namespace ApiToDoList
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSwaggerGen(x =>
+            {
+                x.SwaggerDoc("v1", new OpenApiInfo { Title = "API ToDoList", Version = "v1" });
+            });
+
             services.AddDbContext<ApplicationDBContext>(
                 options => options.UseMySql(Configuration.GetConnectionString("Connection"))
             );
 
             services.AddScoped<ApplicationDBContext, ApplicationDBContext>();
-            services.AddTransient<TaskRepository, TaskRepository>();
-            services.AddTransient<UserRepository, UserRepository>();
+            services.AddTransient<ITaskRepository, TaskRepository>();
+            services.AddTransient<IUserRepository, UserRepository>();
 
             services.AddCors();
             services.AddControllers();
@@ -67,8 +75,15 @@ namespace ApiToDoList
             }
 
             app.UseHttpsRedirection();
+            app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "API ToDoList V1");
+            });
 
             app.UseCors(x => x
                .AllowAnyOrigin()
